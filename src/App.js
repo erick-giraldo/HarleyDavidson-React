@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/footer/Footer";
+import NavBar from "./components/navbar/NavBar";
+import { usersList, usersListConfig } from "./components/backend/ListUsers";
+import ItemListContainer from "./components/itemListContainer/ItemListContainer";
+import Category from "./components/category/Category";
+import CategoryDetail from "./components/category/CategoryDetail";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <NavBar usersList={usersList} profile={usersListConfig} />
+        <Routes>
+          {/* <Route
+            path=""
+            element={<NavBar usersList={usersList} profile={usersListConfig} />}
+          /> */}
+          <Route
+            path=""
+            element={<ItemListContainer usersList={usersList} />}
+          />
+          <Route path="/category" element={<CategoryDetail />} />
+          <Route path="/category/:id" element={<Category />} />
+          <Route path="/item/:id" element={<CategoryDetail />} />
+          {/* <Route path="*" element={<NotFoundPage />} /> */}
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;
