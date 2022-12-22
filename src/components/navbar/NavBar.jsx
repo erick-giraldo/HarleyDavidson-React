@@ -52,6 +52,7 @@ const NavBar = () => {
       active: false,
       disabled: false,
       dropdown: true,
+      // link: "categoria",
       subMenu: [
         { name: "Sport", link: "Sport" },
         { name: "Grand American Touring", link: "Grand American Touring" },
@@ -91,7 +92,6 @@ const NavBar = () => {
   };
 
   const getSubMenu = menuList.find((f) => f.name === "Productos").subMenu;
-  console.log("🚀 ~ file: navbar.jsx:96 ~ NavBar ~ getSubMenu", getSubMenu);
 
   return (
     <AppBar position="static" color="primary">

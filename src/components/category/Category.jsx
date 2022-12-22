@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductsController from "../backend/ProductsController";
-import "./Category.scss";
+import "../../assets/scss/index.scss";
 import { Link, useParams } from "react-router-dom";
 import isEmpty from "is-empty";
 import CircularProgress from '@mui/material/CircularProgress';

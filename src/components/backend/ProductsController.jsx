@@ -3,16 +3,16 @@ import Swal from "sweetalert2";
 
 import { getProducts } from "./ProductsServices";
 
-class ProductsgController {
+class ProductsController {
   static getAllProducts = async ({ title, setProducts, setLoading }) => {
     try {
       setLoading(true)
       const response = await getProducts();
       if (!isEmpty(response)) {
         if (!isEmpty(title)) {
-          const newTite = title.replaceAll("-", " ");
+          const newTitle = title.replaceAll("-", " ");
           const result = response.filter(
-            (e) => e.title.toLowerCase() === newTite
+            (e) => e.title.toLowerCase() === newTitle
           );
           setTimeout(() => {
             setProducts(result);
@@ -42,11 +42,12 @@ class ProductsgController {
       let data = {};
       response.forEach((element) => {
         element.data.forEach((element2) => {
-          if (element2.id === id) {
-            data = element2;
+          if (!isEmpty(element2) && element2.id == id) {
+           return data = element2;
           }
         });
       });
+
       setTimeout(() => {
         setProducts(data);
         setLoading(false)
@@ -65,4 +66,4 @@ class ProductsgController {
   };
 }
 
-export default ProductsgController;
+export default ProductsController;

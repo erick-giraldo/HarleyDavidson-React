@@ -5,6 +5,12 @@ import { usersList, usersListConfig } from "./components/backend/ListUsers";
 import ItemListContainer from "./components/itemListContainer/ItemListContainer";
 import Category from "./components/category/Category";
 import CategoryDetail from "./components/category/CategoryDetail";
+import NotFoundPage from "./components/notFoundPage/NotFoundPage";
+import { Home } from "./components/home/Home";
+import { Whatsapp } from "./components/whatsapp/Whatsapp";
+import AboutUS from "./components/aboutUS/AboutUS";
+import Contact from "./components/contact/Contact";
+
 const App = () => {
   return (
     <>
@@ -15,15 +21,19 @@ const App = () => {
             path=""
             element={<NavBar usersList={usersList} profile={usersListConfig} />}
           /> */}
-          <Route
+          {/* <Route
             path=""
             element={<ItemListContainer usersList={usersList} />}
-          />
+          /> */}
+          <Route path="" element={<Home />} />
+          <Route path="/nosotros" element={<AboutUS />} />
           <Route path="/category" element={<CategoryDetail />} />
           <Route path="/category/:id" element={<Category />} />
           <Route path="/item/:id" element={<CategoryDetail />} />
-          {/* <Route path="*" element={<NotFoundPage />} /> */}
+          <Route path="/contacto" element={<Contact />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        <Whatsapp />
         <Footer />
       </BrowserRouter>
     </>
