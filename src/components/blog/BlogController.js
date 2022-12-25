@@ -1,5 +1,4 @@
 import isEmpty from "is-empty";
-import React from "react";
 import Swal from 'sweetalert2'
 
 import { getPost } from "./BlogServices";

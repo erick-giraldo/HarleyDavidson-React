@@ -1,5 +1,7 @@
 /*Extend*/
 %main-container-default {
+    width: 100%;
+    padding: 2rem 6rem;
     overflow: auto;
     position: relative;
     color: $color-text-secundario;
@@ -39,20 +41,6 @@
     }
 }
 
-/* Moviles*/
-%referencia-movile {
-    @media (max-width: 991px) {
-        height: 100px;
-    }
-}
-
-%main-container-movile {
-    @media (max-width: 991px) {
-        height: calc(100vh - 115px);
-    }
-}
-
-
 .padre {
     .hijo {
         .main-container {
@@ -65,3 +53,19 @@
 
     }
 }
+
+/* Moviles*/
+%referencia-movile {
+    @media (max-width: 991px) {
+        height: 100px;
+    }
+}
+
+%main-container-movile {
+    @media (max-width: 993px) {
+        width: auto;
+        padding: 0;
+        height: calc(100vh - 115px);
+    }
+}
+

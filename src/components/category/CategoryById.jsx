@@ -7,15 +7,18 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 const Category = () => {
   const [products, setProducts] = useState([]);
-  console.log("🚀 ~ file: Category.jsx:10 ~ Category ~ products", products)
   const [loading, setLoading] = useState(true);
 
+  const { id } = useParams();
   useEffect(() => {
+    if (!isEmpty(id)) {
       ProductsController.getAllProducts({
+        title: id,
         setProducts,
         setLoading
       });
-  }, []);
+    }
+  }, [id]);
 
   const listItem = (array) => {
     return array.map((e) => (

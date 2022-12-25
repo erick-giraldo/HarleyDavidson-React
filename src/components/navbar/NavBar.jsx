@@ -52,7 +52,7 @@ const NavBar = () => {
       active: false,
       disabled: false,
       dropdown: true,
-      // link: "categoria",
+      link: "category",
       subMenu: [
         { name: "Sport", link: "Sport" },
         { name: "Grand American Touring", link: "Grand American Touring" },

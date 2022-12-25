@@ -7,7 +7,7 @@ import '../../assets/scss/index.scss'
 const AboutUS = () => {
   return (
     <main className="col-lg-10 col-md-12 col-sm-12 main-container">
-      <div className="referencia">
+     <div className="referencia">
         <nav aria-label="breadcrumb">
           <ol className="descolgado breadcrumb">
             <li className="breadcrumb-item">
@@ -37,7 +37,7 @@ const AboutUS = () => {
           </p>
         </div>
         <div className="col-lg-6 col-md-12 col-sm-12 nosotros-containerB">
-          <img src={bgUS} />
+          <img src={bgUS}  alt='nosotros-img'/>
           <p className="nosotros-sub">Nuestra misión</p>
           <p>
             Más que la fabricación de máquinas, representamos la eterna búsqueda

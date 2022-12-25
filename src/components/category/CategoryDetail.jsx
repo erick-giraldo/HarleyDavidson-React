@@ -22,7 +22,7 @@ const CategoryDetail = () => {
       {loading ? (
         <CircularProgress />
       ) : (
-        <div className="m-scrl">
+        <div className="col-lg-10 col-md-12 col-sm-12 main-container m-scrl">
           <div className="video-player">
             <VideoPlayer />
           </div>

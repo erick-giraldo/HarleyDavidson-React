@@ -1,20 +1,18 @@
 import React from 'react';
-import UserMenu from "../../userMenu/UserMenu";
+import BgPost from '../../assets/images/blog/post/bg-post.webp';
+import Comment1 from '../../assets/images/blog/post/comment-1.webp';
+import Comment2 from '../../assets/images/blog/post/comment-2.webp';
+import Art1 from '../../assets/images/blog/post/art-1.webp';
+import Art2 from '../../assets/images/blog/post/art-2.webp';
+import Art3 from '../../assets/images/blog/post/art-3.webp';
 
-import BgPost from './assets/images/bg-post.webp';
-import Comment1 from './assets/images/comment-1.webp';
-import Comment2 from './assets/images/comment-2.webp';
-import Art1 from './assets/images/art-1.webp';
-import Art2 from './assets/images/art-2.webp';
-import Art3 from './assets/images/art-3.webp';
+import '../../assets/scss/index.scss'
 
-import './assets/scss/Blog.scss'
 import { Link } from 'react-router-dom';
 
 const Post = () => {
   return (
     <main className="col-lg-10 col-md-12 col-sm-12 main-container">
-  <UserMenu />
   <div className="referencia">
     <nav aria-label="breadcrumb">
       <ol className="descolgado breadcrumb">
@@ -66,7 +64,7 @@ const Post = () => {
                   completo y adicionalmente gente muy amable y atentemos atendiendo, 100% recomendable...
                 </p>
                 <div className="d-flex justify-content-between">
-                  <a href="#" className="blog-color-primary">COMPARTIR</a>
+                  <a href="/Post" className="blog-color-primary">COMPARTIR</a>
                   <span className="blog-color-primary">June 14, 2020</span>
                 </div>
               </div>
@@ -88,7 +86,7 @@ const Post = () => {
                   acompañado de tu fiel amiga, tu compañera de aventuras .❤❤❤❤❤
                 </p>
                 <div className="d-flex justify-content-between">
-                  <a href="#" className="blog-color-primary">COMPARTIR</a>
+                  <a href="/Post" className="blog-color-primary">COMPARTIR</a>
                   <span className="d-block text-right blog-color-primary">June 21, 2020</span>
                 </div>
               </div>
@@ -120,26 +118,26 @@ const Post = () => {
           <hr className="mb-3 blog-hr-primary" />
           <h2 className="mb-4 blog-post-title blog-color-primary">Categorias</h2>
           <ul className="blog-mb-75 pl-5 blog-category-list">
-            <li><a href="#" className="blog-color-primary">Experiencias</a></li>
-            <li><a href="#" className="blog-color-primary">Eventos de viaje</a></li>
-            <li><a href="#" className="blog-color-primary">Música y Motos</a></li>
-            <li><a href="#" className="blog-color-primary">Video y Audio</a></li>
-            <li><a href="#" className="blog-color-primary">Reportajes</a></li>
-            <li><a href="#" className="blog-color-primary">Comunidad</a></li>
+            <li><a href="/Post" className="blog-color-primary">Experiencias</a></li>
+            <li><a href="/Post" className="blog-color-primary">Eventos de viaje</a></li>
+            <li><a href="/Post" className="blog-color-primary">Música y Motos</a></li>
+            <li><a href="/Post" className="blog-color-primary">Video y Audio</a></li>
+            <li><a href="/Post" className="blog-color-primary">Reportajes</a></li>
+            <li><a href="/Post" className="blog-color-primary">Comunidad</a></li>
           </ul>
           <hr className="mb-3 blog-hr-primary" />
           <h2 className="blog-mb-40 blog-post-title blog-color-primary">Artículos Relacionados</h2>
-          <a href="#" className="d-block blog-mb-40">
+          <a href="/Post" className="d-block blog-mb-40">
             <img src={Art1} alt="art-1" className="mb-3 img-fluid" />
             <p className="blog-color-primary">El Mantenimiento De La Correa De Transmisión.</p>
           </a>
-          <a href="#" className="d-block blog-mb-40">
+          <a href="/Post" className="d-block blog-mb-40">
             <div>
               <img src={Art2}  alt="art-2" className="mb-3 img-fluid" />
               <p className="blog-color-primary">Soñar A Lo Grande.</p>
             </div>
           </a>
-          <a href="#" className="d-block blog-mb-40">
+          <a href="/Post" className="d-block blog-mb-40">
             <div>
               <img src={Art3}  alt="art-3" className="mb-3 img-fluid" />
               <p className="blog-color-primary">Celebración De La Softail.</p>

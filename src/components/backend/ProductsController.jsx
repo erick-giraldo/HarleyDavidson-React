@@ -10,6 +10,7 @@ class ProductsController {
       const response = await getProducts();
       if (!isEmpty(response)) {
         if (!isEmpty(title)) {
+          console.log('no vacio')
           const newTitle = title.replaceAll("-", " ");
           const result = response.filter(
             (e) => e.title.toLowerCase() === newTitle
@@ -19,6 +20,7 @@ class ProductsController {
             setLoading(false)
           }, 2000);
         }else{
+          console.log('vacio')
           setProducts(response);
           setLoading(false)
         }
@@ -35,6 +37,7 @@ class ProductsController {
       return false;
     }
   };
+
   static getProductById = async ({ id, setProducts, setLoading }) => {
     try {
       setLoading(true)

@@ -10,8 +10,9 @@
 }
 
 .container-both {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+
   .contenido-imagen {
     text-align: center;
   }
@@ -48,22 +49,35 @@
 .main {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   justify-content: center;
   padding: 1rem;
-  height: calc(100vh - 55px); 
+  height: calc(100vh - 55px);
+}
+
+.main-all {
+  display: flex;
+  padding: 4rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 
 
 /* Tablet y Responsive */
 @media (max-width: 993px) {
+  .main-all {
+    padding: 1rem;
+
+  }
+
   .main {
     height: calc(100vh - 115px);
 
     .contenido {
       padding: 20px;
     }
+
   }
 
   .container-both {
@@ -72,22 +86,23 @@
 
     .contenido-container {
       .btn-container {
-        display: flex!important;
+        display: flex !important;
         text-align: center;
       }
     }
   }
 }
-  /* Moviles */
-  // @media (max-width: $sxxl) {
-  //   .container-both .contenido-imagen>img {
-  //     margin-top: 16rem !important;
-  //   }
-  // }
 
-  @media (max-width: $sxl) {
-    .main .contenido{
-      display: flex;
-      justify-content: space-between;
-    }
+/* Moviles */
+// @media (max-width: $sxxl) {
+//   .container-both .contenido-imagen>img {
+//     margin-top: 16rem !important;
+//   }
+// }
+
+@media (max-width: $sxl) {
+  .main .contenido {
+    display: flex;
+    justify-content: space-between;
   }
+}

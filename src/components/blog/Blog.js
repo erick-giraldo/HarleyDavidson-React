@@ -1,12 +1,10 @@
 import isEmpty from "is-empty";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-import UserMenu from "../../userMenu/UserMenu";
-
-import "./assets/scss/Blog.scss";
 import BlogController from "./BlogController";
 import Swal from "sweetalert2";
+
+import '../../assets/scss/index.scss'
 
 const Blog = () => {
   const [post, setPost] = useState([]);
@@ -70,7 +68,6 @@ const Blog = () => {
 
   return (
     <main className="col-lg-10 col-md-12 col-sm-12 main-container">
-      <UserMenu />
       <div className="referencia">
         <nav aria-label="breadcrumb">
           <ol className="descolgado breadcrumb">

@@ -26,7 +26,7 @@ export const Whatsapp = () => {
           </div>
           <div className="wcs_popup_input" data-number="51945970045">
             <input type="text" placeholder="Hola!! Quisiera información!!" />
-            <a href="https://wa.link/ofu5ri" target="_blank">
+            <a href="https://wa.link/ofu5ri" target="_blank" rel="noreferrer">
               <i className="fa fa-play" />
             </a>
           </div>

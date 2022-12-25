@@ -28,9 +28,8 @@ export const Home = () => {
               </ul>
               <div className="btn-container">
                 <Link
-                  to='/Contact'
+                  to='/contacto'
                   className="btn-hover btn-inicio"
-                  onclick="location.href='./contacto.html#formulario'"
                 >
                   Contacto
                 </Link>
