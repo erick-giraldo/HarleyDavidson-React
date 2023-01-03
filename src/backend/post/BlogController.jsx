@@ -4,11 +4,15 @@ import Swal from 'sweetalert2'
 import { getPost } from "./BlogServices";
 
 class BlogController {
-  static getAllPost = async () => {
+  static getAllPost = async (setPost,setLoading) => {
     try {
+      setLoading(true);
       const response = await getPost();
       if (!isEmpty(response)) {
-        return response;
+        setTimeout(() => {
+          setPost(response);
+          setLoading(false);
+        }, 3000);
       }
     } catch (error) {
         Swal.fire({

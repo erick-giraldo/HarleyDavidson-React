@@ -64,7 +64,7 @@
 /* Loading...... */
 .load-7 {
   position: absolute;
-  background: $background_header_footer;
+  // background: $background_header_footer;
   width: 100%;
   height: 100%;
   display: flex;
@@ -96,13 +96,6 @@
       height: $preload-spinner-size;
       animation: preloader-spinner .5s linear infinite;
       animation-delay: 2s;
-
-      .preloader-spinner-icon {
-        stroke: $color-text-global;
-        stroke-width: $preload-spinner-width;
-        stroke-dasharray: 314%, 314%;
-        animation: preloader-spinner-icon-anim 1s linear infinite alternate;
-      }
     }
   }
 }

@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import ProductsController from "../backend/ProductsController";
+import ProductsController from "../../backend/products/ProductsController";
 import "../../assets/scss/index.scss";
 import { Link, useParams } from "react-router-dom";
-import isEmpty from "is-empty";
-import CircularProgress from '@mui/material/CircularProgress';
+import Loading from "../loading/Loading";
 
 const Category = () => {
   const [products, setProducts] = useState([]);
-  console.log("🚀 ~ file: Category.jsx:10 ~ Category ~ products", products)
   const [loading, setLoading] = useState(true);
 
+  const { id } = useParams();
   useEffect(() => {
-      ProductsController.getAllProducts({
-        setProducts,
-        setLoading
-      });
-  }, []);
+    ProductsController.getAllProducts({
+      title: id,
+      setProducts,
+      setLoading,
+    });
+  }, [id]);
 
   const listItem = (array) => {
     return array.map((e) => (
@@ -65,13 +65,26 @@ const Category = () => {
   };
 
   return (
-    <>
-      {loading ? (
-        <CircularProgress />
-      ) : (
-        <div className="col-lg-10 col-md-12 col-sm-12 main-container">{listProducts(products)}</div>
-      )}
-    </>
+    loading ? (
+      <Loading />
+    ) : (
+    <div className="col-lg-10 col-md-12 col-sm-12 main-container">
+       <div className="referencia">
+        <nav aria-label="breadcrumb">
+          <ol className="descolgado breadcrumb">
+            <li className="breadcrumb-item">
+              <li className="breadcrumb-item">
+                <Link to="/">Inicio</Link>
+              </li>
+            </li>
+            <li className="breadcrumb-item active" aria-current="page">
+              Blog
+            </li>
+          </ol>
+        </nav>
+      </div>
+        {listProducts(products)}
+    </div>)
   );
 };
 

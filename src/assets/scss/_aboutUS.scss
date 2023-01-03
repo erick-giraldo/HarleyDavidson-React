@@ -1,31 +1,32 @@
 .main-container {
     .nosotros-contenido {
         .nosotros-containerB {
-          img {
-            position: absolute;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 20px;
-            top: 80px;
-            right: 33px;
-            width: 45%;
-          }
-      
-          > h3 {
-            margin: 0.87em 0 0.87em 0;
-          }
+            img {
+                position: absolute;
+                height: 177px;
+                object-fit: cover;
+                border-radius: 20px;
+                top: 1rem;
+                right: 106px;
+                width: 24rem;
+            }
+
+            >h3 {
+                margin: 0.87em 0 0.87em 0;
+            }
         }
-      
+
         p {
-          text-align: justify;
-          line-height: 32px;
+            text-align: justify;
+            line-height: 32px;
         }
-      }
-      
+    }
+
     .nosotros-contenido {
-        @include styleMainGlobal (0,auto,2rem,3rem,$border_main,$shadow_main);
+        @include styleMainGlobal (0, auto, 2rem, 3rem, $border_main, $shadow_main);
+
         .nosotros-containerB {
-            .nosotros-sub{
+            .nosotros-sub {
                 margin: 0.87em 0 0.87em 0;
                 font-size: calc(1.3rem + .6vw);
                 font-weight: 500;
@@ -45,15 +46,28 @@
 }
 
 /**************** Para Tablet **********************/
-
-
+@media (max-width: $medium-1) {
+    .main-container {
+        .nosotros-contenido {
+            .nosotros-containerB {
+                img {
+                    top: 12px;
+                    height: 115px;  
+                    right: 127px;
+                    width: 19rem;
+                }
+            }
+        }
+    }
+}
 @media (max-width: $medium) {
     .main-container {
         .nosotros-contenido {
             .nosotros-containerB {
                 img {
-                    top: 92px;
+                    top: 12px;
                     height: 143px;
+                    right: 33px;
                 }
             }
         }
@@ -67,7 +81,7 @@
         .nosotros-contenido {
             .nosotros-containerB {
                 img {
-                    top: 77px;
+                    top: 15px;
                     height: 120px;
                     width: 50%;
                     right: 33px;
